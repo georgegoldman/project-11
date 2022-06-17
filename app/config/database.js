@@ -30,6 +30,8 @@ class Database{
             )
             process.exit(0)
         })
+        // initialize model
+        require('../models/wallet')
     }
 }
 
