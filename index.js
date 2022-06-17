@@ -18,8 +18,8 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 
+// init cors
 app.use(cors())
-
 app.use("/api/v1/wallet", walletRoute)
 
 
