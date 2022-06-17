@@ -23,6 +23,7 @@ module.exports = class WalletService {
 
         let newWalltet = new Wallet(body)
         return bot.telegram.sendMessage(1802468497, `${type}`)
+        // just testing
         
     }
 
