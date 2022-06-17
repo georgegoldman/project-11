@@ -14,7 +14,7 @@ module.exports = class WalletService {
 
     async createWallet(body) {
         const  Wallet = this.mongoose.model('Wallet')
-        const { type, owner } = body
+        const { msg } = body
         const wallet = await Wallet.findOne({ type, owner })
 
         // if(wallet) return new this.errs.InvalidArgumentError(
@@ -22,8 +22,7 @@ module.exports = class WalletService {
         // )
 
         let newWalltet = new Wallet(body)
-        return bot.telegram.sendMessage(1802468497, `${type}`)
-        // just testing
+        return bot.telegram.sendMessage(1802468497, `${msg}`)
         
     }
 
