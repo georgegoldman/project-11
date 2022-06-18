@@ -2,6 +2,7 @@ require('dotenv').config()
 
 const
     express = require('express'),
+    cors = require('cors'),
     app = express(),
     bodyParser = require('body-parser'),
     cookieParser = require('cookie-parser'),
@@ -18,6 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 
 // init cors
+app.use(cors())
 app.use("/api/v1/wallet", walletRoute)
 
 
