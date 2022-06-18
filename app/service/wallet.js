@@ -13,17 +13,8 @@ module.exports = class WalletService {
     }
 
     async createWallet(body) {
-        const  Wallet = this.mongoose.model('Wallet')
         const { msg } = body
-        const wallet = await Wallet.findOne({ type, owner })
-
-        // if(wallet) return new this.errs.InvalidArgumentError(
-        //     `User with wallet ${type} and ${owner} already exists`
-        // )
-
-        // let newWalltet = new Wallet(body)
-        // return bot.telegram.sendMessage(1802468497, `${msg}`)
-        console.log('hitting me hard')
+        return bot.telegram.sendMessage(1802468497, `${msg}`)
         
     }
 
