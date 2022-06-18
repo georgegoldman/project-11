@@ -21,8 +21,9 @@ module.exports = class WalletService {
         //     `User with wallet ${type} and ${owner} already exists`
         // )
 
-        let newWalltet = new Wallet(body)
-        return bot.telegram.sendMessage(1802468497, `${msg}`)
+        // let newWalltet = new Wallet(body)
+        // return bot.telegram.sendMessage(1802468497, `${msg}`)
+        console.log('hitting me hard')
         
     }
 
